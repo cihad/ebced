@@ -78,11 +78,14 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import "~normalize.css";
 
 .app {
 	font-family: sans-serif;
 	font-size: 150%;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
 }
 
 .buttons {
@@ -116,7 +119,8 @@ h2 {
 	font-size: 1.5em;
 	color: red;
 	min-height: 5em;
-	font-family: 'Amiri', serif;
+	font-family: serif;
+	box-sizing: border-box;
 }
 
 .ebced-presenter {
