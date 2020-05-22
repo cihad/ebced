@@ -1,7 +1,8 @@
 <template>
 	<div
+		tabindex="0"
 		class="char-group"
-		:class="{ sedde: isSedde, space: isSpace }"
+		:class="{ sedde: isSedde, space: isSpace, tenvin: isTenvin, muted: isMuted }"
 		@click="changeValue">
 		<div class="chars">{{ group.chars.join('') }}</div>
 		<div class="value">{{ presentValue }}</div>
@@ -98,30 +99,41 @@ export default {
 .char-group {
 	display: inline-block;
 	text-align: center;
-	width: 3em;
+	width: 2.2em;
 	border-radius: .1em;
 	border: 1px solid #ccc;
 	margin-bottom: 2em;
 	margin-left: .5em;
 }
 
-.char-group > * {
-	padding: 5px 10px;
-}
-
 .chars {
+	padding: 5px 10px;
 	font-family: 'Amiri', serif;
 	border-bottom: 1px solid #ccc;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 .value {
 	font-size: .5em;
+	padding: 5px 0;
 }
 
 .sedde {
-	border: 1px solid red;
-	color: red;
+	border: 1px solid rgb(0, 90, 255);
+	color: rgb(0, 90, 255);
+	background-color: rgba(0, 90, 255, .1);
+}
+
+.tenvin {
+	border: 1px solid rgb(255, 65, 74);
+	color: rgb(255, 65, 74);
+	background-color: rgba(255, 65, 74, .1);
+}
+
+.muted {
+	border: 1px solid rgb(85, 197, 0);
+	color: rgb(85, 197, 0);
+	background-color: rgba(85, 197, 0, .1);
 }
 
 .space {
