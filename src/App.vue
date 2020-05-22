@@ -4,7 +4,7 @@
 		<textarea
 			class="text-input"
 			dir="rtl"
-			rows="5"
+			rows="2"
 			placeholder="Ebced hesabı yapılacak arapça metin"
 			v-model="text"
 		></textarea>
@@ -118,7 +118,6 @@ h2 {
 	margin-bottom: .5em;
 	font-size: 1.5em;
 	color: red;
-	min-height: 5em;
 	font-family: serif;
 	box-sizing: border-box;
 }
