@@ -3,6 +3,9 @@ Arapça ayet, hadis veya kelimeler için **Ebced** hesaplama uygulaması. Vue.js
 
 Demo: [https://ebced.netlify.app/](https://ebced.netlify.app/)
 
+![ebced uygulamasının ekran görüntüsü](https://raw.githubusercontent.com/cihad/ebced/master/Capture.PNG)
+
+
 ## Özellikleri
 - Tenvini hesaba dahil edip çıkarabilme
 - Şeddeli harfi tek veya çift olarak hesaba dahil edebilme
