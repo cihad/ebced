@@ -13,22 +13,13 @@
 				></textarea>
 			</div>
 
-			<div class="form-group d-flex">
-				<button @click="reset" class="btn btn-danger calculate-btn ml-auto">
-					Sıfırla
-				</button>
-
-				<button @click="calculate" class="btn btn-primary calculate-btn ml-1">
-					Hesapla
-				</button>
-			</div>
-
 			<div class="ebced-presenter">
 				<EbcedGroup v-for="(group, i) in groups" :group="group" :key="i"></EbcedGroup>
 			</div>
 		</div>
 
 		<nav class="navbar fixed-bottom navbar-dark bg-success">
+			<span class="navbar-brand">Kullanım talimatları</span>
 			<span class="ml-auto navbar-brand">Yekûn: {{total}}</span>
 		</nav>
 	</div>
@@ -57,11 +48,15 @@ export default {
 				console.log('DEGISTI')
 				this.total = this.groups.reduce((acc, val) => acc + val.value, 0)
 			}
+		},
+		text() {
+			this.calculate()
 		}
 	},
 	methods: {
 		calculate() {
 			let lastGroup = null
+			this.groups.splice(0, this.groups.length)
 			const groups = []
 
 			this.text.split('').forEach(char => {
@@ -93,5 +88,6 @@ export default {
 
 .ebced-presenter {
 	direction: rtl;
+	margin-bottom: 4rem;
 }
 </style>

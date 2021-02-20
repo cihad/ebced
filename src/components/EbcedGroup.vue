@@ -26,6 +26,9 @@ export default {
 	mounted() {
 		this.calculate()
 	},
+	updated() {
+		this.calculate()
+	},
 	computed: {
 		isMuted() {
 			return this.group.chars.every(char => char in EBCED_MAP)
