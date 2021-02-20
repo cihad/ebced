@@ -1,29 +1,36 @@
 <template>
-	<div class="app">
-		<h1>Ebced Hesapla</h1>
-		<textarea
-			class="text-input"
-			dir="rtl"
-			rows="2"
-			placeholder="Ebced hesabı yapılacak arapça metin"
-			v-model="text"
-		></textarea>
+	<div class="row mt-2">
+		<div class="col">
+			<h1 class="h4">Ebced Hesapla</h1>
 
-		<div class="buttons">
-			<button @click="reset" class="calculate-btn">
-				Reset
-			</button>
-			
-			<button @click="calculate" class="calculate-btn">
-				Hesapla
-			</button>
-		</div>
-			
-		<h2>Sonuç: {{total}}</h2>
+			<div class="form-group">
+				<textarea
+					class="form-control text-input"
+					dir="rtl"
+					rows="2"
+					placeholder="Ebced hesabı yapılacak arapça metin"
+					v-model="text"
+				></textarea>
+			</div>
 
-		<div class="ebced-presenter">
-			<EbcedGroup v-for="(group, i) in groups" :group="group" :key="i"></EbcedGroup>
+			<div class="form-group d-flex">
+				<button @click="reset" class="btn btn-danger calculate-btn ml-auto">
+					Sıfırla
+				</button>
+
+				<button @click="calculate" class="btn btn-primary calculate-btn ml-1">
+					Hesapla
+				</button>
+			</div>
+
+			<div class="ebced-presenter">
+				<EbcedGroup v-for="(group, i) in groups" :group="group" :key="i"></EbcedGroup>
+			</div>
 		</div>
+
+		<nav class="navbar fixed-bottom navbar-dark bg-success">
+			<span class="ml-auto navbar-brand">Yekûn: {{total}}</span>
+		</nav>
 	</div>
 </template>
 
@@ -78,53 +85,10 @@ export default {
 </script>
 
 <style scoped>
-@import "~normalize.css";
-
-h1 {
-	font-size: 1em;
-	margin-top: 0;
-}
-
-.app {
-	font-family: sans-serif;
-	font-size: 150%;
-	padding: 1em;
-	display: flex;
-	flex-direction: column;
-}
-
-.buttons {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-}
-
-.calculate-btn {
-	padding: 10px;
-	flex: 1;
-}
-
-.buttons > button:first-child {
-	margin-right: 1em;
-}
-
-h1 {
-	margin-bottom: .5em;
-	font-size: 1.5em;
-}
-
-h2 {
-	font-size: 1.4em;
-}
+@import "~bootstrap/dist/css/bootstrap.css";
 
 .text-input {
-	width: 100%;
-	padding: .5em;
-	margin-bottom: .5em;
-	font-size: 1.5em;
 	color: red;
-	font-family: serif;
-	box-sizing: border-box;
 }
 
 .ebced-presenter {
