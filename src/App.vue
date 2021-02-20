@@ -80,6 +80,11 @@ export default {
 <style scoped>
 @import "~normalize.css";
 
+h1 {
+	font-size: 1em;
+	margin-top: 0;
+}
+
 .app {
 	font-family: sans-serif;
 	font-size: 150%;

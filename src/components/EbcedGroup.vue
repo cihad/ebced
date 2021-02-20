@@ -82,7 +82,7 @@ export default {
 			}
 
 			if (this.isTenvin) {
-				value = this.countTenvin ? TENVIN_VALUE : 0
+				value += this.countTenvin ? TENVIN_VALUE : 0
 			}
 
 			if (this.isMuted) {
@@ -102,7 +102,7 @@ export default {
 	width: 2.2em;
 	border-radius: .1em;
 	border: 1px solid #ccc;
-	margin-bottom: 2em;
+	margin-bottom: .5em;
 	margin-left: .5em;
 }
 
