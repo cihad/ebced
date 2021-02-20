@@ -19,7 +19,7 @@
 		</div>
 
 		<nav class="navbar fixed-bottom navbar-dark bg-success">
-			<span class="navbar-brand">Kullanım talimatları</span>
+			<!-- <span class="navbar-brand">Kullanım talimatları</span> -->
 			<span class="ml-auto navbar-brand">Yekûn: {{total}}</span>
 		</nav>
 	</div>
