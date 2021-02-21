@@ -19,14 +19,14 @@
 					</div>
 					<small class="form-text text-muted">
 						Hesaplamak istediğiniz Arapca metini üstteki kutucuğa giriniz. Giriş yaptıkça otomatik hesaplayacaktır.
-						(<a href="#" @click="showExample()">Misal</a>)
+						(<a href="#" @click.prevent="showExample()">Misal</a>)
 					</small>
 				</div>
 			</section>
 
 			<section class="mb-5">
 				<div class="pb-2 border-bottom d-flex mb-3">
-					<h2 class="h5 pb-0 mb-0">Hesap Tablosu (<a href="#" @click="showInfo()">?</a>)</h2>
+					<h2 class="h5 pb-0 mb-0">Hesap Tablosu (<a href="#" @click.prevent="showInfo()">?</a>)</h2>
 					<span class="ml-auto text-muted">Manuel Hesaplama</span>
 				</div>
 				<div class="alert alert-warning" v-if="!groups.length">
