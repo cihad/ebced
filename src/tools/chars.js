@@ -1,13 +1,16 @@
-export const SEDDE = '\u0651'
-export const SPACE = '\u0020'
+export const SEDDE = "\u0651";
+export const SPACE = "\u0020";
 
-export const TENVIN_VALUE = 50
-const TENVIN_CHAR_1 = '\u064B' // iki ustun
-const TENVIN_CHAR_2 = '\u064D' // iki esre
+export const TENVIN_VALUE = 50;
+const TENVIN_CHAR_1 = "\u064B"; // iki ustun
+const TENVIN_CHAR_2 = "\u064D"; // iki esre
+const TENVIN_CHAR_3 = "\u064C"; // iki ötre
+const TENVIN_CHARS = [TENVIN_CHAR_1, TENVIN_CHAR_2, TENVIN_CHAR_3];
 
-export const IS_TENVIN = (char) => char === TENVIN_CHAR_1 || char === TENVIN_CHAR_2
+export const IS_TENVIN = (char) => TENVIN_CHARS.includes(char);
 
 export const EBCED_MAP = {
+  '\u0621': 1, // ء
 	'\u0627': 1, // \
 	'\uFE8D': 1,
 	'\uFE8E': 1,
@@ -142,4 +145,4 @@ export const EBCED_MAP = {
 	'\u0629': 400, // ة
 	'\uFE93': 400,
 	'\uFE94': 400
-}
+};

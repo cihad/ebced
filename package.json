@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docker:build": "docker build -t ebced-app .",
+    "docker:start": "docker run -p 3000:3000 -v %CD%:/app --name ebced-container ebced-app"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
